@@ -94,7 +94,17 @@ export const projects = [
     highlight: true,
   },
   {
-    id: 5,
+  id: 5,
+  title: "Analyse des Ventes Retail — Contexte Sénégal",
+  description: "Pipeline de données complet sur 1 million de transactions retail : nettoyage Python/Pandas, chargement PostgreSQL via Docker, 6 requêtes SQL analytiques, segmentation RFM des clients et dashboard Power BI interactif 6 pages (KPIs, tendances, top produits, heatmap, carte, synthèse).",
+  tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Power BI", "SQL", "RFM", "EDA"],
+  github: "https://github.com/khalidousognane865/retail-sales",
+  demo: "",        // ← on remplit ça juste après
+  status: "Terminé",
+  highlight: true,
+},
+  {
+    id: 6,
     title: "Pipeline Big Data Streaming — Application Taxi",
     description: "Conception du backend temps réel d'estimation de distance et de prix de trajets de taxi. Ingestion de flux continus, indexation de données géospatiales et monitoring en temps réel via un tableau de bord dynamique et tolérant aux pannes.",
     tags: ["PySpark", "Apache Kafka", "Apache NiFi", "Elasticsearch", "Kibana"],
@@ -104,7 +114,7 @@ export const projects = [
     highlight: true,
   },
   {
-    id: 6,
+    id: 7,
     title: "Analyse des trajets Citibike NYC",
     description: "Traitement et transformation de plus de 10 millions de trajets réels sur un cluster distribué. Analyse descriptive des volumes temporels et des durées moyennes pour identifier visuellement les stations sous-capacitaires.",
     tags: ["PySpark", "AWS EMR", "AWS S3", "Hue", "Python"],
@@ -114,7 +124,7 @@ export const projects = [
     highlight: false,
   },
   {
-    id: 7,
+    id: 8,
     title: "Prédiction de Risques Cardiovasculaires",
     description: "Étude et comparaison d'algorithmes de classification (Régression Logistique, SVM, Random Forest) sur un jeu de données médicales réelles avec optimisation de la précision sur la classe minoritaire.",
     tags: ["Python", "Scikit-learn", "Machine Learning"],
