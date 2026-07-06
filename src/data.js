@@ -1,6 +1,5 @@
 // ============================================================
-// 👋 PERSONALISE TOUT ICI — C'est le seul fichier à modifier
-//    pour mettre à jour ton contenu (nom, projets, skills, etc.)
+// 
 // ============================================================
 
 export const profile = {
@@ -11,9 +10,9 @@ export const profile = {
   email: "khalidousognane@gmail.com",    // ← ton email
   github: "https://github.com/khalidousognane865",   // ← ton GitHub
   linkedin: "https://www.linkedin.com/in/khalidou-sognane-a71a76272/", // ← ton LinkedIn
-  cvUrl: "/CV_Khalidou_SOGNANE_16_6_26.pdf",                 // ← place ton CV dans /public/cv.pdf
-  photo: "/photo.jpg",              // ← place ta photo dans /public/photo.jpg
-  available: true,                  // false si tu n'es pas dispo
+  cvUrl: "/CV_Khalidou_SOGNANE_06_07_2026.pdf",                 // 
+  photo: "/photo.jpg",              // 
+  available: true,                  // 
 };
 
 export const skills = [
@@ -41,15 +40,17 @@ export const skills = [
   },
   // Catégorie 3
   {
-    category: "Outils & Cloud",
-    items: [
-      { name: "Git / GitHub", level: 85 },
-      { name: "PostgreSQL", level: 80 },
-      { name: "Streamlit", level: 78 },
-      { name: "Linux / Bash", level: 70 },
-      { name: "Kaggle / Colab", level: 80 },
-    ]
-  },
+  category: "Outils & Cloud",
+  items: [
+    { name: "AWS (S3, EMR)", level: 72 },
+    { name: "Docker", level: 75 },
+    { name: "Git / GitHub", level: 85 },
+    { name: "Hue / Hadoop", level: 65 },
+    { name: "Linux / Bash", level: 70 },
+    { name: "PostgreSQL", level: 80 },
+    { name: "Kaggle / Colab", level: 80 },
+  ]
+},
 ];
 
 export const projects = [
@@ -95,7 +96,7 @@ export const projects = [
   },
   {
   id: 5,
-  title: "Analyse des Ventes Retail — Contexte Sénégal",
+  title: "Analyse des Ventes Retail — Pipeline ETL & Dashboard Power BI",
   description: "Pipeline de données complet sur 1 million de transactions retail : nettoyage Python/Pandas, chargement PostgreSQL via Docker, 6 requêtes SQL analytiques, segmentation RFM des clients et dashboard Power BI interactif 6 pages (KPIs, tendances, top produits, heatmap, carte, synthèse).",
   tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Power BI", "SQL", "RFM", "EDA"],
   github: "https://github.com/khalidousognane865/retail-sales",
