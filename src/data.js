@@ -10,7 +10,7 @@ export const profile = {
   email: "khalidousognane@gmail.com",    // ← ton email
   github: "https://github.com/khalidousognane865",   // ← ton GitHub
   linkedin: "https://www.linkedin.com/in/khalidou-sognane-a71a76272/", // ← ton LinkedIn
-  cvUrl: "/CV_Khalidou_SOGNANE_06_07_2026.pdf",                 // 
+  cvUrl: "/CV_Khalidou_SOGNANE.pdf",                 // 
   photo: "/photo.jpg",              // 
   available: true,                  // 
 };
@@ -100,7 +100,7 @@ export const projects = [
   description: "Pipeline de données complet sur 1 million de transactions retail : nettoyage Python/Pandas, chargement PostgreSQL via Docker, 6 requêtes SQL analytiques, segmentation RFM des clients et dashboard Power BI interactif 6 pages (KPIs, tendances, top produits, heatmap, carte, synthèse).",
   tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Power BI", "SQL", "RFM", "EDA"],
   github: "https://github.com/khalidousognane865/retail-sales",
-  demo: "",        // ← on remplit ça juste après
+  demo: "/dashboard_preview.png",        // ← on remplit ça juste après
   status: "Terminé",
   highlight: true,
 },
