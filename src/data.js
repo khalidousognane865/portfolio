@@ -1,182 +1,157 @@
 // ============================================================
-// 
+//     Contenu du portfolio — Khalidou Sognane
+//    Seul fichier à modifier pour mettre à jour le contenu.
 // ============================================================
 
 export const profile = {
-  name: "Khalidou SOGNANE",               // 
-  title: "Data Engineer & IA",
-  subtitle: "Jeune ingénieur passionné par l'écosystème de la donnée,\nje combine des compétences en architecture Big Data et en intelligence artificielle pour valoriser l'information à chaque étape. \nDe l'automatisation de pipelines complexes à l'orchestration de modèles de langage (LLM/RAG),\n j'apporte une vision transverse et polyvalente aux projets.",
+  name: "Khalidou Sognane",
+  title: "AI / LLM Engineer",
+  subtitle:
+    "J'ai conçu un système RAG multimodal de bout en bout pour l'éducation\net je maîtrise la chaîne complète : ingestion, vectorisation, orchestration LLM, déploiement.",
   location: "Dakar, Sénégal",
-  email: "khalidousognane@gmail.com",    // ← ton email
-  github: "https://github.com/khalidousognane865",   // ← ton GitHub
-  linkedin: "https://www.linkedin.com/in/khalidou-sognane-a71a76272/", // ← ton LinkedIn
-  cvUrl: "/CV_Khalidou_SOGNANE.pdf",                 // 
-  photo: "/photo.jpg",              // 
-  available: true,                  // 
+  email: "khalidousognane@gmail.com",
+  github: "https://github.com/khalidousognane865",
+  linkedin: "https://www.linkedin.com/in/khalidou-sognane-a71a76272/",
+  cvUrl: "CV_Khalidou_SOGNANE_AI_Engineer.pdf",              // ← place ton CV (export PDF) dans /public/cv.pdf
+  photo: "/photo.jpg",           // ← optionnel : place une photo dans /public/photo.jpg
+  available: true,
 };
 
+// Compétences groupées par domaine — présentées en badges,
+// sans pourcentage (un niveau auto-déclaré ne se défend pas en entretien ;
+// ce sont les projets ci-dessous qui prouvent le niveau réel).
 export const skills = [
-  // Catégorie 1
+  {
+    category: "IA Générative & LLM",
+    items: [
+      "LangChain", "RAG", "FAISS / ChromaDB", "Hugging Face",
+      "Prompt Engineering", "Mistral", "VLM",
+    ],
+  },
   {
     category: "Data Engineering",
     items: [
-      { name: "Python", level: 90 },
-      { name: "Apache Airflow", level: 75 },
-      { name: "Apache Spark", level: 70 },
-      { name: "SQL / dbt", level: 85 },
-      { name: "Docker", level: 75 },
-    ]
+      "Python", "PySpark", "SQL", "Apache Airflow",
+      "Apache Kafka", "Apache NiFi", "PostgreSQL", "Docker",
+    ],
   },
-  // Catégorie 2
   {
-    category: "Machine Learning & IA",
+    category: "ML & Déploiement",
     items: [
-      { name: "Scikit-learn", level: 80 },
-      { name: "TensorFlow / Keras", level: 65 },
-      { name: "MLflow", level: 70 },
-      { name: "FastAPI", level: 72 },
-      { name: "Pandas / NumPy", level: 90 },
-    ]
+      "Scikit-learn", "TensorFlow / Keras", "FastAPI",
+      "Power BI", "AWS (S3, EMR)", "Git / GitHub",
+    ],
   },
-  // Catégorie 3
-  {
-  category: "Outils & Cloud",
-  items: [
-    { name: "AWS (S3, EMR)", level: 72 },
-    { name: "Docker", level: 75 },
-    { name: "Git / GitHub", level: 85 },
-    { name: "Hue / Hadoop", level: 65 },
-    { name: "Linux / Bash", level: 70 },
-    { name: "PostgreSQL", level: 80 },
-    { name: "Kaggle / Colab", level: 80 },
-  ]
-},
 ];
 
+// ==========================================
 export const projects = [
   {
     id: 1,
-    title: "Pipeline ETL — Qualité de l'Air",
-    description: "Pipeline de données end-to-end collectant des mesures de qualité de l'air (PM2.5, NO2) depuis l'API OpenAQ pour 10 villes africaines, orchestré avec Airflow et visualisé sur un dashboard Streamlit interactif.",
-    tags: ["Python", "Airflow", "Docker", "Streamlit", "OpenAQ API", "PostgreSQL"],
-    github: "https://github.com/tonpseudo/air-quality-pipeline",
-    demo: "https://air-quality.streamlit.app",
-    status: "En cours",     // "Terminé" | "En cours"
-    highlight: true,        // mis en avant sur la page d'accueil
+    title: "Système RAG Multimodal & Agent IA Éducatif",
+    description:
+      "Système tutoriel basé sur les programmes officiels de collège (6ème–3ème). Ingestion PDF/images (PyMuPDF), chunking sémantique, vectorisation FAISS/ChromaDB, génération via Mistral orchestrée avec LangChain, et module VLM pour l'interprétation d'images pédagogiques.",
+    tags: ["LangChain", "Mistral", "FAISS", "ChromaDB", "Gradio", "PyMuPDF", "VLM"],
+    github: "https://github.com/khalidousognane865/Memoire_Education_Rag",
+    demo: "",
+    featured: true,
+    metrics: [
+      { label: "MRR", value: "0,945" },
+      { label: "NDCG", value: "0,883" },
+      { label: "Faithfulness", value: "0,910" },
+      { label: "Hallucination", value: "1,05 %" },
+    ],
   },
   {
     id: 2,
-    title: "Système de Recommandation de Films",
-    description: "Système de recommandation collaboratif et content-based entraîné sur MovieLens 25M, avec tracking MLflow, API FastAPI déployée sur Render et interface de démo interactive.",
-    tags: ["Python", "MLflow", "FastAPI", "Scikit-learn", "Docker", "MovieLens"],
-    github: "https://github.com/tonpseudo/movie-recommender",
-    demo: "https://movie-recommender.onrender.com",
-    status: "En cours",
-    highlight: true,
+    title: "Analyse des Ventes Retail — Pipeline ETL & Power BI",
+    description:
+      "Pipeline de données complet sur 1 million de transactions retail : nettoyage Python/Pandas, chargement PostgreSQL via Docker, segmentation RFM des clients et dashboard Power BI interactif 6 pages.",
+    tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Power BI", "RFM"],
+    github: "https://github.com/khalidousognane865/retail-sales",
+    demo: "",
+    featured: false,
   },
   {
     id: 3,
-    title: "Analyse Prédictive — Marchés Agricoles Africains",
-    description: "Analyse des prix alimentaires (mil, maïs, riz) dans 5 pays d'Afrique de l'Ouest avec détection d'anomalies, modèles de prévision Prophet/SARIMA et dashboard cartographique interactif.",
-    tags: ["Python", "Prophet", "Pandas", "Streamlit", "FAO Data", "Geopandas"],
-    github: "https://github.com/tonpseudo/agri-markets-africa",
-    demo: "https://agri-markets.streamlit.app",
-    status: "En cours",
-    highlight: true,
+    title: "Pipeline Big Data Streaming — Application Taxi",
+    description:
+      "Backend temps réel d'estimation de distance et de prix de trajets. Ingestion de flux continus via Kafka, transformation avec NiFi, indexation géospatiale Elasticsearch et monitoring via dashboard Kibana tolérant aux pannes.",
+    tags: ["PySpark", "Apache Kafka", "Apache NiFi", "Elasticsearch", "Kibana"],
+    github: "",
+    demo: "",
+    featured: false,
   },
   {
     id: 4,
-    title: "Système RAG Multimodal & Agent IA Éducatif",
-    description: "Architecture end-to-end d'un système tutoriel basé sur les programmes officiels de collège. Ingestion automatisée, chunking sémantique, intégration d'un module VLM pour la gestion des images, et réduction complète des hallucinations ancrée sur des sources vérifiées.",
-    tags: ["LangChain", "Mistral", "FAISS", "ChromaDB", "Gradio", "PyMuPDF", "VLM"],
-    github: "https://github.com/khalidousognane865/Memoire_Education_Rag",
-    demo: "", // À compléter si disponible
-    status: "Terminé",
-    highlight: true,
-  },
-  {
-  id: 5,
-  title: "Analyse des Ventes Retail — Pipeline ETL & Dashboard Power BI",
-  description: "Pipeline de données complet sur 1 million de transactions retail : nettoyage Python/Pandas, chargement PostgreSQL via Docker, 6 requêtes SQL analytiques, segmentation RFM des clients et dashboard Power BI interactif 6 pages (KPIs, tendances, top produits, heatmap, carte, synthèse).",
-  tags: ["Python", "Pandas", "PostgreSQL", "Docker", "Power BI", "SQL", "RFM", "EDA"],
-  github: "https://github.com/khalidousognane865/retail-sales",
-  demo: "/dashboard_preview.png",        // ← on remplit ça juste après
-  status: "Terminé",
-  highlight: true,
-},
-  {
-    id: 6,
-    title: "Pipeline Big Data Streaming — Application Taxi",
-    description: "Conception du backend temps réel d'estimation de distance et de prix de trajets de taxi. Ingestion de flux continus, indexation de données géospatiales et monitoring en temps réel via un tableau de bord dynamique et tolérant aux pannes.",
-    tags: ["PySpark", "Apache Kafka", "Apache NiFi", "Elasticsearch", "Kibana"],
-    github: "",
-    demo: "", 
-    status: "Terminé",
-    highlight: true,
-  },
-  {
-    id: 7,
-    title: "Analyse des trajets Citibike NYC",
-    description: "Traitement et transformation de plus de 10 millions de trajets réels sur un cluster distribué. Analyse descriptive des volumes temporels et des durées moyennes pour identifier visuellement les stations sous-capacitaires.",
-    tags: ["PySpark", "AWS EMR", "AWS S3", "Hue", "Python"],
+    title: "Analyse des Trajets Citibike NYC",
+    description:
+      "Traitement et transformation de plus de 10 millions de trajets réels sur cluster distribué AWS EMR. Analyse descriptive des volumes temporels et des durées moyennes pour identifier les stations sous-capacitaires.",
+    tags: ["PySpark", "AWS EMR", "AWS S3", "Hue"],
     github: "",
     demo: "",
-    status: "Terminé",
-    highlight: false,
+    featured: false,
   },
   {
-    id: 8,
+    id: 5,
     title: "Prédiction de Risques Cardiovasculaires",
-    description: "Étude et comparaison d'algorithmes de classification (Régression Logistique, SVM, Random Forest) sur un jeu de données médicales réelles avec optimisation de la précision sur la classe minoritaire.",
+    description:
+      "Étude et comparaison d'algorithmes de classification (Régression Logistique, SVM, Random Forest) sur un jeu de données médicales réelles, avec optimisation de la précision sur la classe minoritaire.",
     tags: ["Python", "Scikit-learn", "Machine Learning"],
     github: "",
     demo: "",
-    status: "Terminé",
-    highlight: false,
-  }
+    featured: false,
+  },
 ];
 
-export const parcours = [
+// Timeline — formation et expériences mêlées, ordre reverse-chronologique.
+export const experience = [
   {
-    year: "2024 - 2026",
-    title: "Master 2 — Ingénierie des Données & IA (Mention Bien)",
-    org: "Université Iba Der Thiam, Thiès",
-    type: "formation", // Permet de filtrer ou d'afficher une icône différente (ex: Chapeau de diplômé)
-    description: "Conception et architecture end-to-end d'un système RAG multimodal et d'un agent IA pour l'éducation (LangChain, Ollama, FAISS) avec réduction des hallucinations.",
-  },
-  {
-    year: "2026 (7 - 13 Juin)",
+    year: "7 – 13 juin 2026",
     title: "Enquêteur Terrain",
-    org: "MCA (Millennium Challenge Account) — Kaolack",
-    type: "experience", // Permet d'afficher une icône de valise/travail
-    description: "Mission intensive de collecte et de traitement de données quantitatives et qualitatives sur le terrain.",
+    org: "Millennium Challenge Account (MCA) · Kaolack",
+    type: "Expérience",
+    description:
+      "Collecte et traitement de données quantitatives et qualitatives sur le terrain ; contrôle qualité des questionnaires et remontée des données dans les délais impartis.",
   },
   {
-    year: "2026 (Avril - Juin)",
+    year: "Avril – Juin 2026",
     title: "Prestataire Télé-enquêteur",
-    org: "Ipsos",
-    type: "experience",
-    description: "Conduite d'enquêtes d'opinion et collectes de données statistiques par téléphone.",
+    org: "Ipsos Sénégal",
+    type: "Expérience",
+    description:
+      "Enquêtes d'opinion et de satisfaction client par téléphone auprès de panels représentatifs ; saisie et vérification des données selon les standards méthodologiques Ipsos.",
   },
   {
-    year: "2023 - 2024",
-    title: "Master 1 — Science des Données (Major de promotion)",
-    org: "Université Iba Der Thiam, Thiès",
-    type: "formation",
-    description: "Spécialisation en Big Data, calcul distribué et streaming (PySpark, Kafka, NiFi) appliqués à des cas réels.",
+    year: "2024 – 2026",
+    title: "Master 2 — Ingénierie des Données & IA",
+    org: "Université Iba Der Thiam, Thiès · Mention Bien",
+    type: "Formation",
+    description:
+      "Mémoire : conception et architecture end-to-end d'un système RAG multimodal et d'un agent IA pour l'éducation, avec réduction rigoureuse des hallucinations.",
   },
   {
-    year: "2019 - 2023",
-    title: "Licence MPI — Spécialité Informatique (Major L3)",
+    year: "2023 – 2024",
+    title: "Master 1 — Science des Données et Application",
+    org: "Université Iba Der Thiam, Thiès · Major de promotion",
+    type: "Formation",
+    description:
+      "Spécialisation Big Data, calcul distribué et streaming (PySpark, Kafka, NiFi) appliqués à des cas réels.",
+  },
+  {
+    year: "2021 – 2023",
+    title: "Assistant Pédagogique & Tuteur Universitaire",
     org: "Université Assane Seck, Ziguinchor",
-    type: "formation",
-    description: "Bases solides en algorithmique, structures de données et mathématiques. Mission de tutorat et d'encadrement des nouveaux étudiants.",
+    type: "Expérience",
+    description:
+      "Tutorat en Algorithmique et Programmation pour les promotions L1/L2 ; accompagnement des nouveaux étudiants.",
   },
   {
-    year: "2019",
-    title: "Baccalauréat S2",
-    org: "Sénégal",
-    type: "formation",
-    description: "Série Scientifique (Sciences Expérimentales).",
-  }
+    year: "2019 – 2023",
+    title: "Licence MPI — Spécialité Informatique",
+    org: "Université Assane Seck, Ziguinchor · Major de promotion L3",
+    type: "Formation",
+    description:
+      "Bases solides en algorithmique, structures de données et mathématiques.",
+  },
 ];

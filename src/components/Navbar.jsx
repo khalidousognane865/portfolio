@@ -38,7 +38,7 @@ export default function Navbar() {
         <Link to="hero" smooth duration={500} className="cursor-pointer">
           <span className="font-display font-bold text-xl">
             <span className="gradient-text">&lt;</span>
-            <span className="text-white">DE</span>
+            <span className="text-white">KS</span>
             <span className="gradient-text">/&gt;</span>
           </span>
         </Link>
