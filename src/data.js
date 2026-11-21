@@ -12,7 +12,7 @@ export const profile = {
   email: "khalidousognane@gmail.com",
   github: "https://github.com/khalidousognane865",
   linkedin: "https://www.linkedin.com/in/khalidou-sognane-a71a76272/",
-  cvUrl: "CV_Khalidou_SOGNANE_AI_Engineer.pdf",              // ← place ton CV (export PDF) dans /public/cv.pdf
+  cvUrl: "/CV_Khalidou_Sognane_Ingenieur_Data_IA.pdf", // ← place ce PDF dans /public/
   photo: "/photo.jpg",           // ← optionnel : place une photo dans /public/photo.jpg
   available: true,
 };
@@ -24,23 +24,36 @@ export const skills = [
   {
     category: "IA Générative & LLM",
     items: [
-      "LangChain", "RAG", "FAISS / ChromaDB", "Hugging Face",
-      "Prompt Engineering", "Mistral", "VLM",
+      "LangChain", "RAG", "Agents IA", "FAISS / ChromaDB", "Hugging Face",
+      "Transformers", "Ollama", "Prompt Engineering", "Fine-tuning",
+      "Mistral-7B (4-bit)", "VLM (Qwen2-VL)",
+    ],
+  },
+  {
+    category: "Évaluation RAG",
+    items: [
+      "NDCG", "MRR", "Faithfulness", "Answer Similarity",
+      "RAGAS", "LLM-as-a-Judge",
     ],
   },
   {
     category: "Data Engineering",
     items: [
       "Python", "PySpark", "SQL", "Apache Airflow",
-      "Apache Kafka", "Apache NiFi", "PostgreSQL", "Docker",
+      "Apache Kafka", "Apache NiFi", "PostgreSQL", "Elasticsearch",
+      "ETL / ELT", "Docker",
     ],
   },
   {
     category: "ML & Déploiement",
     items: [
-      "Scikit-learn", "TensorFlow / Keras", "FastAPI",
-      "Power BI", "AWS (S3, EMR)", "Git / GitHub",
+      "Scikit-learn", "TensorFlow / Keras", "PyTorch (notions)", "FastAPI",
+      "Power BI", "Kibana", "AWS (S3, EMR)", "Git / GitHub",
     ],
+  },
+  {
+    category: "En apprentissage",
+    items: ["Snowflake", "Databricks"],
   },
 ];
 
@@ -50,7 +63,7 @@ export const projects = [
     id: 1,
     title: "Système RAG Multimodal & Agent IA Éducatif",
     description:
-      "Système tutoriel basé sur les programmes officiels de collège (6ème–3ème). Ingestion PDF/images (PyMuPDF), chunking sémantique, vectorisation FAISS/ChromaDB, génération via Mistral orchestrée avec LangChain, et module VLM pour l'interprétation d'images pédagogiques.",
+      "Système tutoriel basé sur les programmes officiels de collège (6ème–3ème) : 15 fascicules, 731 pages, 395 illustrations verbalisées par Qwen2-VL. Ingestion PDF/images (PyMuPDF), chunking sémantique, vectorisation FAISS/ChromaDB, génération via Mistral-7B orchestrée avec LangChain, interface Gradio (chat, quiz, résumés). Évalué sur 95 questions.",
     tags: ["LangChain", "Mistral", "FAISS", "ChromaDB", "Gradio", "PyMuPDF", "VLM"],
     github: "https://github.com/khalidousognane865/Memoire_Education_Rag",
     demo: "",
@@ -59,7 +72,7 @@ export const projects = [
       { label: "MRR", value: "0,945" },
       { label: "NDCG", value: "0,883" },
       { label: "Faithfulness", value: "0,910" },
-      { label: "Hallucination", value: "1,05 %" },
+      { label: "Hallucination (95 q.)", value: "1,05 %" },
     ],
   },
   {
@@ -107,6 +120,14 @@ export const projects = [
 // Timeline — formation et expériences mêlées, ordre reverse-chronologique.
 export const experience = [
   {
+    year: "Oct. – Nov. 2026",
+    title: "Volontaire — Team Omega (Résultats & Vidéo)",
+    org: "Jeux Olympiques de la Jeunesse Dakar 2026 (COJOJ) · Dakar",
+    type: "Expérience",
+    description:
+      "Saisie en direct des données de match de futsal (fautes, tirs, buts) alimentant les résultats officiels, avec exigence de rapidité et de fiabilité ; assistant vidéo sur les épreuves de taekwondo (captation des combats utilisée pour le Video Replay et la révision par les juges) ; travail en équipe dans un environnement international, sous contrainte de temps réel.",
+  },
+  {
     year: "7 – 13 juin 2026",
     title: "Enquêteur Terrain",
     org: "Millennium Challenge Account (MCA) · Kaolack",
@@ -129,6 +150,13 @@ export const experience = [
     type: "Formation",
     description:
       "Mémoire : conception et architecture end-to-end d'un système RAG multimodal et d'un agent IA pour l'éducation, avec réduction rigoureuse des hallucinations.",
+  },
+  {
+    year: "Mai 2024",
+    title: "Certificat Data Analysis",
+    org: "Force N",
+    type: "Formation",
+    description: "Formation certifiante en analyse de données.",
   },
   {
     year: "2023 – 2024",
